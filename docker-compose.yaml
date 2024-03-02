@@ -12,6 +12,7 @@ services:
     restart: always
     ports:
       - 8080:8080
+
   database:
     image: postgres:16.2-bullseye
     restart: always
@@ -24,6 +25,7 @@ services:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pass
       PGDATA: /var/lib/postgresql/data/pgdata
+
   backend:
     command: ["npm", "run", "start:debug"]
     depends_on:
