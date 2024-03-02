@@ -2,6 +2,7 @@ version: "3.*"
 
 services:
   backend:
+    command: ["npm", "run", "start:debug"]
     build:
       context: .
       dockerfile: Dockerfile
